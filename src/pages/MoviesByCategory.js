@@ -5,12 +5,12 @@ import CategoryDetails from '../components/ContentDetails/CategoryDetails';
 
 
 const MoviesByCategory = () => {
-  const [categories, setCategory] = useState([]);
+  const [category, setCategory] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isErr, setIsErr] = useState(false);
 
   //fetch categories
-  const fetchCategories = async () => {
+  const fetchCategory = async () => {
     try {
       const { data: results } = await axios.get(
         'https://video-proxy.3rdy.tv/api/vod/category/28/assets/?page=1&size=20'
@@ -24,13 +24,13 @@ const MoviesByCategory = () => {
   };
   
   useEffect(() => {
-      fetchCategories();
+      fetchCategory();
   }, []);
   
   return (
     <Grid container >
       
-        {categories?.map(category => (
+        {category?.map(category => (
           <Grid item md={4}>
           <CategoryDetails category={category}/>
        

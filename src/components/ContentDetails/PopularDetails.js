@@ -1,22 +1,22 @@
 import React from 'react'
 import { Button } from '@material-ui/core';
 
-const CategoryDetails = ({ category }) => {
+const PopularDetails = ({ popular }) => {
     // console.log(category.poster_path);
   return (
     <div className="category_card" id="bright">
         <div className="info_section">
             <div className="category_header">
                 <h1>
-                    {category.title}
+                    {popular.title}
                 </h1>
                 <h4>
-                    Release date: {category.release_date}
+                    Release date: {popular.release_date}
                 </h4>
-                <span className="minutes"> Rating: {category.vote_average} </span>
+                <span className="minutes"> Rating: {popular.vote_average} </span>
             </div>
             <div className="movie_desc">
-                <p className="test">Description: {category.overview}</p>
+                <p className="test">Description: {popular.overview}</p>
             </div>
             <div 
                 style={{
@@ -39,4 +39,4 @@ const CategoryDetails = ({ category }) => {
   )
 }
 
-export default CategoryDetails
+export default PopularDetails

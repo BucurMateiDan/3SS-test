@@ -1,25 +1,37 @@
+import { Grid } from '@material-ui/core';
+import axios from 'axios';
 import React from 'react';
-import { useEffect } from 'react';
-import { MediaPlayer } from '../container/MediaPlayer';
-
-
+import { useState, useEffect } from 'react';
+import MediaPlayer from '../container/MediaPlayer';
 
 const AssetDetails = () => {
+  const [video, setVideo] = useState([]);
+
+  const fetchAsset = async() => {
+    try {
+      const {data: results } = await axios.get(
+        'https://video-proxy.3rdy.tv/api/vod/asset/516486/videos'
+      );
+      setVideo(results.data.results);
+    } catch(error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
-    // GET request using fetch inside useEffect React hook
-    fetch('https://video-proxy.3rdy.tv/api/vod/asset/36647')
-      .then((response) => {
-        // console.log(response);
-        response.json().then((data) => {
-          // console.log(data);
-        });
-      });
-    // empty dependency array means this effect will only run once (like componentDidMount in classes)
+    fetchAsset();
   }, []);
+
   return (
-    <div>
-      <MediaPlayer />
-    </div>
+    <Grid container >
+      
+        {video?.map(video => (
+          <Grid item md={4}>
+          <MediaPlayer video={video}/>
+       
+      </Grid> 
+      ))}
+    </Grid>
   );
 };
 
