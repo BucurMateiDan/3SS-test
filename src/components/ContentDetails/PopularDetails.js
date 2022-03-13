@@ -1,12 +1,17 @@
 import React from 'react'
 import { Button } from '@material-ui/core';
+import { NavLink } from 'react-router-dom';
 
 const PopularDetails = ({ popular }) => {
-    // console.log(category.poster_path);
+const img = "https://image.tmdb.org/t/p/w500";
   return (
     <div className="category_card" id="bright">
         <div className="info_section">
             <div className="category_header">
+            <NavLink to='/asset'>
+            <img className="poster" style={{width:"200px"}}
+                src={img + popular.poster_path} />
+            </NavLink>
                 <h1>
                     {popular.title}
                 </h1>
@@ -25,15 +30,7 @@ const PopularDetails = ({ popular }) => {
                     justifyContent: "flex-start",
                 }}
             >
-                {/* <div style={{ margin: "5px" }}>
-                    <li>
-                        <MediaPlayer/> 
-                    </li>    
-                </div>     */}
             </div>
-            {/* <div class="blur_back bright_back">
-                {<img src="/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" />}
-            </div> */}
         </div>
     </div>
   )

@@ -31,7 +31,7 @@ const MoviesByCategory = () => {
     <Grid container >
       
         {category?.map(category => (
-          <Grid item md={4}>
+          <Grid item md={4} key={category.id}>
           <CategoryDetails category={category}/>
        
       </Grid> 

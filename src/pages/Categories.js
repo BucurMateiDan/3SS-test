@@ -32,7 +32,7 @@ const Categories = () => {
     <Grid container >
       
         {categories?.map(categories => (
-          <Grid item md={4}>
+          <Grid item md={4} key={categories.id}>
           <CategoriesDetails categories={categories}/>
        
       </Grid> 

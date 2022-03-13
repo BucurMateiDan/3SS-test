@@ -24,7 +24,7 @@ const Popular = () => {
     <Grid container >
       
         {popular?.map(popular => (
-          <Grid item md={4}>
+          <Grid item md={4} key={popular.id}>
           <PopularDetails popular={popular}/>
        
       </Grid> 
