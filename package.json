@@ -14,6 +14,7 @@
     "classnames": "^2.3.1",
     "material-paper": "^0.0.8",
     "material-style": "^0.0.1",
+    "npm-check-updates": "^12.5.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
@@ -24,6 +25,7 @@
     "react-simply-carousel": "^5.1.4",
     "react-slick": "^0.28.1",
     "redux-devtools-extension": "^2.13.9",
+    "redux-promise": "^0.6.0",
     "sass": "^1.49.9",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3"

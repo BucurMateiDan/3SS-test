@@ -15,7 +15,6 @@ const Categories = () => {
       const { data: results } = await axios.get(
         'https://video-proxy.3rdy.tv/api/vod/category'
       );
-      console.log(results);
       setCategories(results.data.genres);
       setLoading(false);
     } catch (error) {

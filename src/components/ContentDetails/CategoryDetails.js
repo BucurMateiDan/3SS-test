@@ -15,10 +15,10 @@ const CategoryDetails = ({ category }) => {
                 <h1>
                     {category.title}
                 </h1>
-                <h4>
+                <h3>
                     Release date: {category.release_date}
-                </h4>
-                <span className="minutes"> Rating: {category.vote_average} </span>
+                </h3>
+                <h4 > Rating: {category.vote_average} </h4>
             </div>
             <div className="movie_desc">
                 <p className="test">Description: {category.overview}</p>

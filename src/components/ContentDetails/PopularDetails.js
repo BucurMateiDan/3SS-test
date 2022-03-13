@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 
 const PopularDetails = ({ popular }) => {
@@ -15,21 +14,10 @@ const img = "https://image.tmdb.org/t/p/w500";
                 <h1>
                     {popular.title}
                 </h1>
-                <h4>
+                <h3>
                     Release date: {popular.release_date}
-                </h4>
-                <span className="minutes"> Rating: {popular.vote_average} </span>
-            </div>
-            <div className="movie_desc">
-                <p className="test">Description: {popular.overview}</p>
-            </div>
-            <div 
-                style={{
-                    display: "flex",
-                    margin: "5px",
-                    justifyContent: "flex-start",
-                }}
-            >
+                </h3>
+                <h4> Rating: {popular.vote_average} </h4>
             </div>
         </div>
     </div>

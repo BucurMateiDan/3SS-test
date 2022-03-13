@@ -13,7 +13,6 @@ const AssetDetails = () => {
       const {data: results } = await axios.get(
         'https://video-proxy.3rdy.tv/api/vod/asset/516486/videos'
       );
-      console.log(results.data.results);
       setVideo(results.data.results);
     } catch(error) {
       console.error(error);
@@ -24,7 +23,6 @@ const AssetDetails = () => {
       const {data: results } = await axios.get(
         'https://video-proxy.3rdy.tv/api/vod/asset/36647'
       );
-      console.log(results.data);
       setAsset(results.data);
     } catch(error) {
       console.error(error);
@@ -35,17 +33,16 @@ const AssetDetails = () => {
     fetchVideo();
     fetchAsset();
   }, []);
-  console.log(video);
+
   return (  
     <div>
       <AssetDetail asset={asset}/>
       {video?.map(video => (
-          <MediaPlayer video={video}/>
+        <li key={video.id}>
+          <MediaPlayer key={video.key} video={video}/>
+        </li>  
       ))}
     </div>
-            
-       
-      
   );
 };
 

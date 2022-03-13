@@ -10,19 +10,19 @@ const Navbar = () => {
             </NavLink>
             <Bars />
             <NavMenu>
-                <NavLink to='/' activeStyle={{display: 'none'}}>
+                <NavLink to='/' style={{display: 'none'}}>
                     Home
                 </NavLink>
-                <NavLink to='/categories' activeStyle>
+                <NavLink to='/categories' >
                     Categories
                 </NavLink>
-                <NavLink to='/movies' activeStyle>
+                <NavLink to='/movies' >
                     MoviesByCategory
                 </NavLink>
-                <NavLink to='/asset' activeStyle>
+                <NavLink to='/asset' >
                     AssetDetails
                 </NavLink>
-                <NavLink to='/popular' activeStyle>
+                <NavLink to='/popular' >
                     Popular
                 </NavLink>
             </NavMenu>

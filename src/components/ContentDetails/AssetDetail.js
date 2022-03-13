@@ -9,10 +9,9 @@ const img = "https://image.tmdb.org/t/p/w500";
             <div className="category_header">
             <img className="poster" style={{width:"200px"}}
                 src={img + asset.poster_path} />
-                <h1>
+                <h2>
                     {asset.title}
-                </h1>
-                {/* <MediaPlayer asset={asset}/> */}
+                </h2>
         </div>
     </div>
     </div>

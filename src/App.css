@@ -6,3 +6,70 @@
   margin: 0;
   padding: 0;
 }
+
+h1{
+  margin-left: 13.3rem;
+  margin-top: -17rem;
+  height: 13rem;
+  font-size: 18px;
+}
+
+h2{
+  padding-left: 15rem;
+  font-size: 26px;
+  margin-top:-18rem;
+
+}
+
+h3{
+  margin-left:13.5rem;
+  font-size: 15px;
+}
+
+h4{
+  margin-left:13.5rem;
+  min-height: 60px;
+  font-size: 15px;
+}
+
+.poster{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+p{
+  margin-left: 10px;
+  max-height: 130px;
+  overflow-y: scroll;
+}
+
+.categories_header{
+  margin-left: 11rem;
+  padding-top: 3rem;
+  font-size: 26px;
+  color:#121212;
+}
+
+li{
+  list-style-type: none;
+  padding-left: 14.5rem;
+  padding-top:1rem;
+}
+
+.btn-primary{
+  background-color: #121212; 
+  border: none;
+  color: red;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.notFound {
+  margin-left: 0rem;
+  margin-top: 1rem;
+  margin-bottom: -10rem;
+  text-align: center;
+}
